@@ -1,0 +1,94 @@
+/* Lab 4: Great Auto Parts - Order Form
+   Color theme based on Twisted Minds: coral pink #FA4B69 and cyan #00DCD9 on black */
+
+:root {
+  --tm-pink: #fa4b69;
+  --tm-cyan: #00dcd9;
+  --bg: #0e0e12;
+  --field-bg: #1a1a21;
+  --border: #34343f;
+  --text: #f5f5f7;
+  --placeholder: #8a8a96;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  margin: 0;
+}
+
+/* Center the form in a 500px column */
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--tm-pink);
+  margin: 12px 0 20px;
+}
+
+/* Each label sits on its own line above its field */
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--text);
+  background-color: var(--field-bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  box-sizing: border-box;
+  /* makes the date picker icon and number spinners light so they show on the dark fields */
+  color-scheme: dark;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder);
+}
+
+textarea {
+  height: 220px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--tm-cyan);
+  box-shadow: 0 0 0 2px rgba(0, 220, 217, 0.25);
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--tm-pink);
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--tm-cyan);
+}
+
+::selection {
+  background-color: var(--tm-pink);
+  color: black;
+}
